@@ -1,15 +1,28 @@
-function addlist() {
-  let uinput = document.getElementById('input').value;
-  document.getElementById('input').value = '';
+var text = document.getElementById('input');
+var button = document.getElementById('button');
 
-  if (uinput != null) {
+button.addEventListener("click", function() {
+  var str = text.value;
+  text.value = '';
+
+  let list = document.querySelector('#list');
+  let newLI = document.createElement('li');
+  newLI.innerHTML = str;
+  list.appendChild(newLI);
+});
+
+//FIXME: when user clicks enter in textbox trigger button clicked function
+text.addEventListener("keyup", function (event) {
+  if (event.key === 'Enter' || event.keyCode === 13) {
+    var str = text.value;
+    text.value = '';
+
     let list = document.querySelector('#list');
-
     let newLI = document.createElement('li');
-    newLI.innerHTML = uinput;
+    newLI.innerHTML = str;
     list.appendChild(newLI);
   }
-}
+});
 
 function remove(el) {
     let list = document.querySelector('#list');
