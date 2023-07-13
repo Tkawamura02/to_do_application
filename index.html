@@ -10,19 +10,15 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="list">
-            <h2>Simple List</h2>
-            <ul id="list" onclick="remove(this)">
-                <li>go see the movies</li>
-                <li>double click on tasks to delete!</li>
-            </ul>
-        </div>
-        <div class="form">
-            <form><input id="input" type="text" placeholder="do my homework.."></form>
-            <button id="button">Submit</button>
-        </div>
+    <div class="header">
+        <input id="input" type="text" placeholder="do my homework..">
+        <span onclick="add()" class="addBtn">Add</span>
     </div>
+    <ul id="list">
+        <li>go see the movies</li>
+        <li>go to the gym</li>
+        <li class="checked">pay bills</li>
+    </ul>
 
     <script src="script.js" charset="utf-8"></script>
 </body>
